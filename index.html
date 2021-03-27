@@ -8,152 +8,309 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/png" href="resource/image/avatar.jpg">
 <style>
-::-webkit-scrollbar {
-  display: none;
-}
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-a.logo{text-decoration: none;}
-textarea{resize: none;}
-p{text-align: left;} /*DEBUG*/
-input, textarea {margin: 10px 0;}
-.w3-row-padding img {margin-bottom: 12px}
-.w3-sidebar {width: 120px;background: #222;}
-/* Set the width of the sidebar to 120px */
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-.container {position: relative;}
-.overlay {position: absolute;top: 0;bottom: 0;left: 0;right: 0;height: 100%;width: 100%;opacity: 0;transition: .5s ease;background-color:rgba(0,0,0,0.8);}
-.container:hover .overlay {opacity: 1;}
-.text {position: absolute;top: 30%;left: 42%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 80%;}
-@media only screen and (max-width: 1920px) {.overlay{opacity: 0;}}
-@media only screen and (max-width: 800px) {#main {margin-left: 120px;}.overlay{opacity:1 !important;background-color:rgba(0,0,0,0.8)}.text{font-size: 12px; left: 48%; top: 48%; width: 90%;}}
-@media only screen and (max-width: 600px) {#main {margin-left: 0;}.overlay{opacity:1 !important;background-color:rgba(0,0,0,0.8)}.text{left: 100%;}}
-@media only screen and (max-width: 414px) {#main {margin-left: 0;}.overlay{opacity:1 !important;background-color:rgba(0,0,0,0.8)}.text{font-size: 8px;left: 50%;}.text h5{font-size: 11px; margin: 5px 0}}
-@media only screen and (max-width: 375px) {#main {margin-left: 0px;}.overlay{opacity:1 !important;background-color:rgba(0,0,0,0.8)}.text{font-size: 7px;left: 50%;}.text h5{font-size: 7px; margin: 9px 0}}
-@media only screen and (max-width: 300px) {#main {margin-left: 0px;}.overlay{opacity:1 !important;background-color:rgba(0,0,0,0.8)}.text{font-size: 5px;left: 50%;}.text h5{font-size: 7px; margin: 5px 0}}
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Montserrat", sans-serif
+  }
+
+  a.logo {
+    text-decoration: none;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  /*DEBUG*/
+  input,
+  textarea {
+    margin: 10px 0;
+  }
+
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
+
+  .w3-sidebar {
+    width: 120px;
+    background: #222;
+  }
+
+  /* Set the width of the sidebar to 120px */
+  /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+  #main {
+    margin-left: 120px
+  }
+
+  /* Remove margins from "page content" on small screens */
+  .container {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 1920px) {
+    .overlay {
+      opacity: 0;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #main {
+      margin-left: 120px;
+    }
+
+    .overlay {
+      opacity: 1 !important;
+      background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .text {
+      font-size: 12px;
+      left: 48%;
+      top: 48%;
+      width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #main {
+      margin-left: 0;
+    }
+
+    .overlay {
+      opacity: 1 !important;
+      background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .text {
+      left: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    #main {
+      margin-left: 0;
+    }
+
+    .overlay {
+      opacity: 1 !important;
+      background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .text {
+      font-size: 8px;
+      left: 50%;
+    }
+
+    .text h5 {
+      font-size: 11px;
+      margin: 5px 0
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    #main {
+      margin-left: 0px;
+    }
+
+    .overlay {
+      opacity: 1 !important;
+      background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .text {
+      font-size: 7px;
+      left: 50%;
+    }
+
+    .text h5 {
+      font-size: 7px;
+      margin: 9px 0
+    }
+  }
+
+  @media only screen and (max-width: 300px) {
+    #main {
+      margin-left: 0px;
+    }
+
+    .overlay {
+      opacity: 1 !important;
+      background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .text {
+      font-size: 5px;
+      left: 50%;
+    }
+
+    .text h5 {
+      font-size: 7px;
+      margin: 5px 0
+    }
+  }
 </style>
+
 <body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="resource/image/avatar.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <h6>HOME</h6> <!--DEBUG-->
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <h6>ABOUT</h6>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-gamepad w3-xxlarge"></i>
-    <h6>WORK</h6>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <h6>CONTACT</h6>
-  </a>
-</nav>
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <img src="resource/image/avatar.jpg" style="width:100%">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <h6>HOME</h6>
+      <!--DEBUG-->
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <h6>ABOUT</h6>
+    </a>
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-gamepad w3-xxlarge"></i>
+      <h6>WORK</h6>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <h6>CONTACT</h6>
+    </a>
+  </nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">WORK</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Wassapol Pungjap</h1>
-    <h6>Game Developer and Game Designer.</h6>
-    <img src="resource/image/hero.png" alt="hero" class="w3-image" width="992" height="1108">
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>My name is Wassapol Pungjap. I’m a motivated game developer with high ambition. I never experience working in any game company or studio, 
-      but would love to. I used to develop a horror game with simple mechanics (Flashlight, Batteries, Door, Key, Simple combat, Simple Pathfinding enemy) 
-      for my university subject, “Game Design and Development”. I also developped visual novel in the past as a freelance-job working with Architecture Student. 
-      Currently developping a visual novel for my Senior Project<br><br>In free time, I like to play games, analyze the game META (League of Legends, Teamfight Tactics, and Hearthstone), listen to music, mess around with Unity, and watch E-Sport. (Mostly LCK).
-    </p>
-
-<h3 class="w3-padding-16 w3-text-light-grey">My Skill</h3>
-    <hr style="width:200px" class="w3-opacity">
-    <p>- Understand and experienced with Unity, mainly coding. Understand the major concepts of Game Object and components.</p>
-    <p>- Capable of coding the game with Object-Oriented Programming Paradigms. Capable in coding with Object-Oriented Programming using Java, C#.</p>
-    <p>- Aside from Unity, Experienced with other game engines such as Construct 2, Ren'Py.</p>
-    <p>- Open-minded, openly expresses ideas. Coporately works with others.</p>
-    <p>- Capable of reading and speaking in English.</p>
-
-    <button onclick="window.open('Resume-2020.jpg', '_blank');" class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download" target="_blank"></i> Download Resume
-    </button>
-
-    <h3 class="w3-padding-16 w3-text-light-grey">Education</h3>
-    <hr style="width:200px" class="w3-opacity">
-    <p>King Mongkut's Institute of Technology Ladkrabang (KMITL)</p>
-    <p><span>Bachelor of Science Program in Information Technology (2017 - Present)</span></p>
-    <p>GPA: 3.21 (5 Terms)</p><br>
-
-    <p>Bangpleeratbamrung School</p>
-    <p><span>Gifted program (2014 - 2017)</span></p>
-    <p>GPA: 3.70 (5 Terms)</p>
-
-    <h3 class="w3-padding-16 w3-text-light-grey">Activity</h3>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Staff in Game Orion Camp, IT CAMP 14</p>
-    <p>Staff in GrindelGame Camp, IT CAMP 15</p>
-    <p>Teaching Unity to Multimedial juniors</p>
-    
-    <!-- Testimonials -->
-    <h3 class="w3-text-light-grey">Reference</h3>
-    <hr style="width:200px" class="w3-opacity">
-    <img src="resource/image/ref_avatar_1.jpg" alt="Samart" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Dr. Samart Moodleah, </span>Ph.D. Technology (International Program)</p>
-    <p>Lecturer at KMITL</p>
-    <p>samart@it.kmitl.ac.th</p>
-  <!-- End About Section -->
-  </div>
-
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Photo</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="resource/image/activity-1.jpg" style="width:100%">
-        <img src="resource/image/activity-2.png" style="width:100%">
-        <img src="resource/image/activity-3.jpg" style="width:100%">
-      </div>
-
-      <div class="w3-half">
-        <img src="resource/image/activity-4.jpg" style="width:100%">
-        <img src="resource/image/activity-5.jpg" style="width:100%">
-        <img src="resource/image/activity-6.jpg" style="width:100%">
-      </div>
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+      <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">WORK</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
     </div>
   </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Work</h2>
-    <hr style="width:200px" class="w3-opacity">
 
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
+  <!-- Page Content -->
+  <div class="w3-padding-large" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+      <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Wassapol Pungjap</h1>
+      <h6>Game Programmer and Game Designer.</h6>
+      <img src="resource/image/hero.png" alt="hero" class="w3-image" width="992" height="1108">
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <h2 class="w3-text-light-grey">About Me</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>My name is Wassapol Pungjap. I’m a motivated game developer with high ambition. I never experience working in
+        any game company or studio,
+        but would love to. I used to develop a horror game with simple mechanics (Flashlight, Batteries, , Key,
+        Simple combat, Simple Pathfinding enemy)
+        for my university subject, “Game Design and Development”. I also developped visual novel in the past Dooras a
+        freelance-job working with Architecture Student.
+        Currently developping a visual novel for my Senior Project<br><br>In free time, I like to play games, listen to
+        music, and watch Hololive.
+      </p>
+
+      <h3 class="w3-padding-16 w3-text-light-grey">My Skill</h3>
+      <hr style="width:200px" class="w3-opacity">
+      <p>- Understand and experienced with Unity, mainly coding. Understand the major concepts of Game Object and
+        components.</p>
+      <p>- Capable of coding the game with Object-Oriented Programming Paradigms. Capable in coding with Object-Oriented
+        Programming using Java, C#.</p>
+      <p>- Aside from Unity, Experienced with other game engines such as Construct 2, Ren'Py.</p>
+      <p>- Open-minded, openly expresses ideas. Coporately works with others.</p>
+      <p>- Capable of reading and speaking in English.</p>
+
+      <button onclick="window.open('Resume-2020.jpg', '_blank');"
+        class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-download" target="_blank"></i> Download Resume
+      </button>
+
+      <h3 class="w3-padding-16 w3-text-light-grey">Education</h3>
+      <hr style="width:200px" class="w3-opacity">
+      <p>King Mongkut's Institute of Technology Ladkrabang (KMITL)</p>
+      <p><span>Bachelor of Science Program in Information Technology (2017 - Present)</span></p>
+      <p>GPA: 3.24 (7 semesters)</p><br>
+
+      <p>Bangpleeratbamrung School</p>
+      <p><span>Gifted program (2014 - 2017)</span></p>
+      <p>GPA: 3.70 (5 semesters)</p>
+
+      <h3 class="w3-padding-16 w3-text-light-grey">Activity</h3>
+      <hr style="width:200px" class="w3-opacity">
+      <p>Staff in Game Orion Camp, IT CAMP 14</p>
+      <p>Staff in GrindelGame Camp, IT CAMP 15</p>
+      <p>Teaching Unity to Multimedial juniors</p>
+
+      <!-- End About Section -->
+    </div>
+
+    <div class="w3-padding-64 w3-content" id="photos">
+      <h2 class="w3-text-light-grey">My Photo</h2>
+      <hr style="width:200px" class="w3-opacity">
+
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="resource/image/activity-1.jpg" style="width:100%">
+          <img src="resource/image/activity-2.png" style="width:100%">
+          <img src="resource/image/activity-3.jpg" style="width:100%">
+        </div>
+
+        <div class="w3-half">
+          <img src="resource/image/activity-4.jpg" style="width:100%">
+          <img src="resource/image/activity-5.jpg" style="width:100%">
+          <img src="resource/image/activity-6.jpg" style="width:100%">
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="w3-padding-64 w3-content" id="photos">
+      <h2 class="w3-text-light-grey">My Work</h2>
+      <hr style="width:200px" class="w3-opacity">
+
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
         <div class="container">
-            <img src="resource/image/project-1.png" style="width:100%">
-            <a href="https://drive.google.com/open?id=1JH1HwIeSMwyOlzRn_1XWydpwL0n1QOks">
+          <img src="resource/image/project-1.png" style="width:100%">
+          <a href="https://www.youtube.com/watch?v=crnzp1l3wDU">
             <div class="overlay">
               <div class="text">
                 <h5>Project Name: Lost</h5>
@@ -161,95 +318,127 @@ input, textarea {margin: 10px 0;}
                 <h5>Language: C#</h5>
                 <h5>Position: Designer, Programmer, Writer</h5>
                 <h5>Responsibility: Mechanic Design, coding everything, story writing.</h5>
-                <p>An ordinary man, lives with his normally life but one day, everything changes. Wake up to an unknown place, strange and unfamiliar. He need to find the way out of this place while uncover the truth behind this at the same time.</p>
+                <p>An ordinary man, lives with his normally life but one day, everything changes. Wake up to an unknown
+                  place, strange and unfamiliar. He need to find the way out of this place while uncover the truth
+                  behind this at the same time.</p>
               </div>
             </div>
-            </a>
+          </a>
+        </div>
+        <div class="container">
+          <img src="resource/image/project-5.png" style="width:100%">
+          <a href="https://github.com/abc666777/devourer">
+            <div class="overlay">
+              <div class="text">
+                <h5>Project Name: Devourer</h5>
+                <h5>Tool: Unity</h5>
+                <h5>Language: C#</h5>
+                <h5>Position: Balancer, Programmer</h5>
+                <h5>Responsibility: Game Balance, coding everything.</h5>
+                <p>A classic Feeding Frenzy arcade-style with a twist. In Devourer, players control a hungry alien-like
+                  creature proposed to eat as many other aliens as possible like Feeding Frenzy, however, the difference
+                  is that players have a handful of buff to aid them. Since the game is endless, it has a different
+                  obstacle which is the hunger that will decrease over time and darkness that surrounds you, you can
+                  only be guided by light on your head.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="container">
           <img src="resource/image/project-2.png" style="width:100%">
           <a href="https://github.com/sopoat0101/MiniFightingGame">
-          <div class="overlay">
-            <div class="text">
-              <h5>Project Name: Battle of Surface</h5>
-              <h5>Tool: Eclipse Java Photon, Adobe Photoshop, Punk-o-matic 2</h5>
-              <h5>Language: Java (with libgdx)</h5>
-              <h5>Position: GUI Designer, Level Designer, Programmer, Composer.</h5>
-              <h5>Responsibility: Coding all menus, designing background, compose a music</h5>
-              <p>A mini 2D fighting game. Set in the future, humanity was near extinction from the war, so the ingenious AI moved human  subconscious into the virtual world to keep on  fighting without actually dying.</p>
+            <div class="overlay">
+              <div class="text">
+                <h5>Project Name: Battle of Surface</h5>
+                <h5>Tool: Eclipse Java Photon, Adobe Photoshop, Punk-o-matic 2</h5>
+                <h5>Language: Java (with libgdx)</h5>
+                <h5>Position: GUI Designer, Level Designer, Programmer, Composer.</h5>
+                <h5>Responsibility: Coding all menus, designing background, compose a music</h5>
+                <p>A mini 2D fighting game. Set in the future, humanity was near extinction from the war, so the
+                  ingenious AI moved human subconscious into the virtual world to keep on fighting without actually
+                  dying.</p>
+              </div>
             </div>
-          </div>
           </a>
         </div>
         <div class="container">
           <img src="resource/image/project-3.PNG" style="width:100%">
           <a href="https://abc666777.github.io/mega-tic-tac-toe">
-          <div class="overlay">
-            <div class="text">
-              <h5>Project Name: Mega-Tic-Tac-Toe</h5>
-              <h5>Tool: Sublime Text</h5>
-              <h5>Language: HTML CSS JavaScript</h5>
-              <h5>Position: Programmer</h5>
-              <h5>Responsibility: Coding condition checking when to win or lose, adding music and sound effect.</h5>
-              <p>A 2 player offline Tic-Tac-Toe game with some new condition. Both players take turn marking the space in a 15x15 grid. The player who succeeds in placing five of their marks in a horizontal, vertical, or diagonal row is the winner. When the timer runs out, the opponent will take turn instead.</p>
+            <div class="overlay">
+              <div class="text">
+                <h5>Project Name: Mega-Tic-Tac-Toe</h5>
+                <h5>Tool: Sublime Text</h5>
+                <h5>Language: HTML CSS JavaScript</h5>
+                <h5>Position: Programmer</h5>
+                <h5>Responsibility: Coding condition checking when to win or lose, adding music and sound effect.</h5>
+                <p>A 2 player offline Tic-Tac-Toe game with some new condition. Both players take turn marking the space
+                  in a 15x15 grid. The player who succeeds in placing five of their marks in a horizontal, vertical, or
+                  diagonal row is the winner. When the timer runs out, the opponent will take turn instead.</p>
+              </div>
             </div>
-          </div>
           </a>
         </div>
         <div class="container">
           <img src="resource/image/project-4.PNG" style="width:100%">
           <a href="https://www.youtube.com/watch?v=v4wWWf_D7oQ">
-          <div class="overlay">
-            <div class="text">
-              <h5>Project Name: Analysis: Personality Learning</h5>
-              <h5>Tool: Unity</h5>
-              <h5>Language: C#</h5>
-              <h5>Position: Programmer</h5>
-              <h5>Responsibility: Coding album scene, result scene, in-game menu, volume settings. Debugging some of the gameplay.</h5>
-              <p>Collaboration with Architecture student. This personality theory game is a visual novel. And there are questions for players to choose and answer according to the situation in the game The game will include content on personality theory. Allowing players to have experience with the characters. And gain knowledge of personality theory at the same time</p>
+            <div class="overlay">
+              <div class="text">
+                <h5>Project Name: Analysis: Personality Learning</h5>
+                <h5>Tool: Unity</h5>
+                <h5>Language: C#</h5>
+                <h5>Position: Programmer</h5>
+                <h5>Responsibility: Coding album scene, result scene, in-game menu, volume settings. Debugging some of
+                  the gameplay.</h5>
+                <p>Collaboration with Architecture student. This personality theory game is a visual novel. And there
+                  are questions for players to choose and answer according to the situation in the game The game will
+                  include content on personality theory. Allowing players to have experience with the characters. And
+                  gain knowledge of personality theory at the same time</p>
+              </div>
             </div>
-          </div>
           </a>
         </div>
-    <!-- End photo grid -->
+        <!-- End photo grid -->
+      </div>
+      <!-- End Portfolio Section -->
     </div>
-  <!-- End Portfolio Section -->
-  </div>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+    <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <h2 class="w3-text-light-grey">Contact Me</h2>
+      <hr style="width:200px" class="w3-opacity">
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 305/70 M.11 Sukhaphiban Rd.
-Bangplee Yai, Bangplee, Samut Prakan 10540 </p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> +66 95-876-3539</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> pptvstudio@gmail.com</p>
-    </div><br>
-  <!-- End Contact Section -->
-  </div>
-  
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 305/70 M.11 Sukhaphiban Rd.
+          Bangplee Yai, Bangplee, Samut Prakan 10540 </p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> +66 95-876-3539</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> pptvstudio@gmail.com</p>
+      </div><br>
+      <!-- End Contact Section -->
+    </div>
+
     <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <a class="logo" href="https://www.facebook.com/wassapolOsas">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    </a>
-    <a class="logo" href="https://www.youtube.com/MrHellGamerChannel">
-      <i class="fa fa-youtube-play w3-hover-opacity"></i>
-    </a>
-    <a class="logo" href="https://github.com/abc666777/">
-      <i class="fa fa-github w3-hover-opacity"></i>
-    </a>
-    <a class="logo" href="https://www.linkedin.com/in/wassapolpungjap/">
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </a>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  <!-- End footer -->
-  </footer>
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+      <a class="logo" href="https://www.facebook.com/wassapolOsas">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      </a>
+      <a class="logo" href="https://www.youtube.com/MrHellGamerChannel">
+        <i class="fa fa-youtube-play w3-hover-opacity"></i>
+      </a>
+      <a class="logo" href="https://github.com/abc666777/">
+        <i class="fa fa-github w3-hover-opacity"></i>
+      </a>
+      <a class="logo" href="https://www.linkedin.com/in/wassapolpungjap/">
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </a>
+      <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          class="w3-hover-text-green">w3.css</a></p>
+      <!-- End footer -->
+    </footer>
 
-<!-- END PAGE CONTENT -->
-</div>
+    <!-- END PAGE CONTENT -->
+  </div>
 
 </body>
+
 </html>
